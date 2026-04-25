@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>김민재 포트폴리오 | 정보보호학</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">MinJae's Security</div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#activities">Activities</a></li>
+          <li><a href="#assignments">Assignments</a></li>
+          <li><a href="#team">team</a></li>
+          <li><a href="#links">links</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+      <h1>안녕하세요, 김민재입니다.</h1>
+      <p>중부대학교 정보보호학 전공</p>
+      <p class="tagline">#웹프로그래밍 #웹해킹 #보안전문가</p>
+    </section>
+
+    <section id="activities" class="section">
+      <h2 class="section-title">Activities & Certifications</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-header">
+            <span class="badge blue">자격사항</span>
+            <h3>Certifications</h3>
+          </div>
+          <ul class="points">
+            <li><b>인터넷 보안전문가 2급</b> 취득 (2025.12)</li>
+            <li><b>네트워크 관리사 2급</b> 취득 예정 (2026)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="badge green">동아리</span>
+            <h3>S.C.P (Security Check Point)</h3>
+          </div>
+          <p class="desc">중부대학교 정보보안 동아리 SCP 활동 (2026~)</p>
+          <ul class="points">
+            <li>
+              <b>SQL Injection 세미나:</b> 취약점 원리 분석 및 실습 시연 진행
+            </li>
+            <li><b>XSS 세미나:</b> 2026.05 발표 예정</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="badge dark">멘토링</span>
+            <h3>Mentoring & Study</h3>
+          </div>
+          <ul class="points">
+            <li><b>Linux:</b> bandit 문제 풀이 및 기본 명령어 과제 수행</li>
+            <li><b>C언어:</b> 반복문, 조건문, 포인터 관련 과제 수행</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="assignments" class="section">
+      <h2 class="section-title">Assignments</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-header">
+            <span class="badge gray">과제 3</span>
+            <span class="badge blue">HTML/CSS</span>
+            <h3>HCJDemo 프로젝트</h3>
+          </div>
+          <div class="card-body">
+            <p class="desc">
+              웹 사이트의 기본 구조인 Home, About, Contact 페이지를 구성하고
+              상호 링크를 연결하는 실습을 진행했습니다.
+            </p>
+            <ul class="points">
+              <li>시멘틱 태그를 활용한 레이아웃 설계</li>
+              <li>GitHub와 Vercel을 이용한 첫 웹 서비스 배포</li>
+            </ul>
+            <div class="card-links">
+              <a
+                href="https://github.com/minjae0202/hcj2026-2"
+                target="_blank"
+                class="small-btn"
+                >GitHub</a
+              >
+              <a
+                href="https://hcj2026-2-umber.vercel.app/"
+                target="_blank"
+                class="small-btn"
+                >Live</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="card shadow-highlight">
+          <div class="card-header">
+            <span class="badge gray">과제 4</span>
+            <span class="badge green">HTML 심화</span>
+            <h3>HTML 기본 태그 익히기</h3>
+          </div>
+          <div class="card-body">
+            <p class="desc">
+              기존 HCJDemo에 다양한 HTML 핵심 요소를 추가하여 통합적인 웹
+              페이지를 완성했습니다.
+            </p>
+            <ul class="points">
+              <li><b>List/Table:</b> 강의시간표 및 목록 페이지 제작</li>
+              <li><b>Multimedia:</b> Audio, Video 태그 활용 페이지</li>
+              <li><b>Forms:</b> 사용자 등록 페이지(입력 양식) 구현</li>
+              <li>메뉴 양식에 맞춘 4개 페이지 통합 및 Vercel 재배포</li>
+            </ul>
+            <div class="card-links">
+              <a
+                href="https://github.com/minjae0202/hcj2026-2-ver2"
+                target="_blank"
+                class="small-btn highlight"
+                >GitHub</a
+              >
+              <a
+                href="https://hcj2026-2-ver2.vercel.app/"
+                target="_blank"
+                class="small-btn highlight"
+                >Live</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="section bg-light">
+      <h2 class="section-title">Team Project</h2>
+      <div class="project-container">
+        <div class="project-info">
+          <div class="project-header">
+            <span class="badge dark">Team Project</span>
+            <h3>통합 보안 취약점 분석 및 대응 가이드 사이트</h3>
+          </div>
+
+          <div class="project-body">
+            <p class="project-desc">
+              Web, System(Pwnable), Cloud 환경에서 발생할 수 있는 주요 취약점을
+              분석하고, 실무적인 보안 대책을 체계적으로 정리하여 제공하는 보안
+              지식 아카이브 서비스입니다.
+            </p>
+
+            <div class="team-grid">
+              <div class="team-member-card">
+                <strong>팀장: 이효정</strong>
+                <p>Index/Main 페이지 제작, System 취약점 조사</p>
+              </div>
+              <div class="team-member-card highlight">
+                <strong>팀원: 김민재 (나)</strong>
+                <p>Main 페이지 제작, Web 취약점 조사</p>
+              </div>
+              <div class="team-member-card">
+                <strong>팀원: 이제희</strong>
+                <p>세부/수정 페이지 제작, Cloud 취약점 조사</p>
+              </div>
+            </div>
+
+            <div class="project-links">
+              <a
+                href="https://web-team-sable.vercel.app/"
+                target="_blank"
+                class="link-btn main-btn"
+                >직접 배포한 주소 확인</a
+              >
+              <a
+                href="https://github.com/minjae0202/Web_team"
+                target="_blank"
+                class="link-btn outline-btn"
+                >Source Code (GitHub)</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="links" class="section">
+      <h2 class="section-title">Links</h2>
+      <div class="link-grid">
+        <a href="https://github.com/minjae0202" class="ext-link" target="_blank"
+          >GitHub 바로가기</a
+        >
+        <a
+          href="https://blog.naver.com/minjaemando"
+          class="ext-link"
+          target="_blank"
+          >Blog 바로가기</a
+        >
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 2026 Kim Min Jae. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

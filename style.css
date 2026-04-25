@@ -1,0 +1,193 @@
+/* 공통 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Pretendard', sans-serif;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* 헤더 (메뉴 일관성) */
+.header {
+  background: #002244;
+  color: white;
+  padding: 1rem 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+.nav-list li {
+  margin-left: 20px;
+}
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* 메인 화면 */
+.hero {
+  height: 50vh;
+  background: linear-gradient(135deg, #002244, #0055aa);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* 섹션 레이아웃 */
+.section {
+  padding: 80px 10%;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #002244;
+}
+.bg-light {
+  background: #f8f9fa;
+}
+
+/* 그리드 시스템 (반응형의 핵심) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* 화면 작아지면 자동으로 밑으로 내려감 */
+  gap: 20px;
+}
+.card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  transition: 0.3s;
+}
+.card:hover {
+  border-color: #0055aa;
+  transform: translateY(-5px);
+}
+
+/* 링크 버튼 스타일 */
+.link-btn,
+.ext-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #0055aa;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* 📱 모바일 반응형 처리 */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-list {
+    margin-top: 10px;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .section {
+    padding: 50px 5%;
+  }
+}
+
+/* 카드 내부 스타일 보완 */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background: #e1ecf4;
+  color: #39739d;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.desc {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+.points {
+  list-style: none;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+.points li::before {
+  content: '• ';
+  color: #0055aa;
+}
+.small-btn {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #0055aa;
+  border: 1px solid #0055aa;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-right: 5px;
+  transition: 0.2s;
+}
+.small-btn:hover {
+  background: #0055aa;
+  color: white;
+}
+
+/* 팀원 소개 그리드 */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.team-member-card {
+  background: #fdfdfd;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  font-size: 0.9rem;
+}
+.team-member-card strong {
+  display: block;
+  color: #333;
+  margin-bottom: 5px;
+}
+.team-member-card p {
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+.team-member-card.highlight {
+  border: 1px solid #0055aa;
+  background: #f0f7ff;
+}
+
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
