@@ -2,16 +2,48 @@
 * {
   margin: 0;
   padding: 0;
-  box-box-sizing: border-box;
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 body {
   font-family: 'Pretendard', sans-serif;
   color: #333;
   line-height: 1.8;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
-/* 헤더 (메뉴 일관성) */
+/* 📢 최상단 전광판 스타일 */
+.ticker-container {
+  background: #001122;
+  color: #00ffcc; /* 네온 느낌의 민트색 */
+  font-family: 'Courier New', Courier, monospace; /* 보안/코딩 느낌 폰트 */
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px 0;
+  overflow: hidden;
+  border-bottom: 1px solid #002244;
+}
+body.dark-mode .ticker-container {
+  background: #0d0d0d;
+  color: #33ff33; /* 다크모드일 때는 터미널 초록색 */
+}
+.ticker-text {
+  transition:
+    opacity 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+/* 전환 애니메이션 상태 */
+.ticker-text.fade {
+  opacity: 0;
+  transform: translateY(-5px);
+}
+
+/* 헤더 */
 .header {
   background: #002244;
   color: white;
@@ -34,6 +66,7 @@ body {
   color: white;
   text-decoration: none;
   font-size: 0.9rem;
+  transition: color 0.2s;
 }
 
 /* 메인 화면 */
@@ -64,15 +97,13 @@ body {
 }
 .bg-light {
   background: #f8f9fa;
+  transition: background-color 0.3s;
 }
 
-/* 그리드 시스템 (반응형의 핵심) */
+/* 그리드 시스템 */
 .grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(280px, 1fr)
-  ); /* 화면 작아지면 자동으로 밑으로 내려감 */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 .card {
@@ -170,6 +201,9 @@ body {
   border-radius: 8px;
   border: 1px solid #eee;
   font-size: 0.9rem;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s;
 }
 .team-member-card strong {
   display: block;
@@ -190,4 +224,101 @@ body {
   .team-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ==========================================
+   🌙 JavaScript 연동 기능 전용 추가 스타일
+   ========================================== */
+
+/* 다크모드 활성화 시 스타일 */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+body.dark-mode .bg-light {
+  background-color: #1e1e1e;
+}
+body.dark-mode .card,
+body.dark-mode .team-member-card {
+  background-color: #1e1e1e;
+  border-color: #333;
+  color: #e0e0e0;
+}
+body.dark-mode .team-member-card strong {
+  color: #fff;
+}
+body.dark-mode .points {
+  color: #aaa;
+}
+body.dark-mode .section-title {
+  color: #3388ff;
+}
+body.dark-mode .team-member-card.highlight {
+  border-color: #3388ff;
+  background: #112244;
+}
+
+/* 네비게이션 활성화(Active) 상태 디자인 */
+.nav-list a.active {
+  color: #3388ff;
+  font-weight: bold;
+  border-bottom: 2px solid #3388ff;
+  padding-bottom: 4px;
+}
+
+/* 다크모드 토글 버튼 */
+.theme-toggle-btn {
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: #002244;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition:
+    transform 0.2s,
+    background-color 0.3s;
+}
+body.dark-mode .theme-toggle-btn {
+  background: #3388ff;
+}
+.theme-toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+/* 위로 이동(Scroll to Top) 버튼 */
+.scroll-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: #0055aa;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.scroll-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+.scroll-btn:hover {
+  background: #002244;
+}
+body.dark-mode .scroll-btn:hover {
+  background: #3388ff;
 }

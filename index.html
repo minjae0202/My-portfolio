@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="ticker-container">
+      <div id="ticker-text" class="ticker-text">> 이병천 교수님 팬입니다</div>
+    </div>
+
     <header class="header">
       <div class="logo">MinJae's Security</div>
       <nav class="nav">
@@ -48,20 +52,22 @@
           <p class="desc">중부대학교 정보보안 동아리 SCP 활동 (2026~)</p>
           <ul class="points">
             <li>
-              <b>SQL Injection 세미나:</b> 취약점 원리 분석 및 실습 시연 진행
+              <b>SQL Injection 세미나:</b> 취약점 원리 분석 및 los 실습 시연
+              진행
             </li>
-            <li><b>XSS 세미나:</b> 2026.05 발표 예정</li>
+            <li><b>XSS 세미나:</b> 취약점 원리 분석, 드림핵 실습 진행</li>
+            <li><b>IDOR 세미나:</b> 취약점 원리 분석, PortSwigger 실습 진행</li>
           </ul>
         </div>
 
         <div class="card">
           <div class="card-header">
-            <span class="badge dark">멘토링</span>
-            <h3>Mentoring & Study</h3>
+            <span class="badge dark">대외활동</span>
+            <h3>WhiteHat School</h3>
           </div>
           <ul class="points">
-            <li><b>Linux:</b> bandit 문제 풀이 및 기본 명령어 과제 수행</li>
-            <li><b>C언어:</b> 반복문, 조건문, 포인터 관련 과제 수행</li>
+            <li>화이트햇 스쿨 4기 교육생</li>
+            <li>2026.06-2026.12</li>
           </ul>
         </div>
       </div>
@@ -157,15 +163,21 @@
             <div class="team-grid">
               <div class="team-member-card">
                 <strong>팀장: 이효정</strong>
-                <p>Index/Main 페이지 제작, System 취약점 조사</p>
+                <p><b>중간: </b>Index/Main 페이지 제작, System 취약점 조사</p>
+                <p><b>기말: </b>퀴즈 기능 추가, 발표</p>
               </div>
               <div class="team-member-card highlight">
                 <strong>팀원: 김민재 (나)</strong>
-                <p>Main 페이지 제작, Web 취약점 조사</p>
+                <p><b>중간: </b>Main 페이지 제작, Web 취약점 조사</p>
+                <p><b>기말: </b>전광판 기능 추가, ppt 제작</p>
               </div>
               <div class="team-member-card">
                 <strong>팀원: 이제희</strong>
-                <p>세부/수정 페이지 제작, Cloud 취약점 조사</p>
+                <p><b>중간: </b>세부/수정 페이지 제작, Cloud 취약점 조사</p>
+                <p>
+                  <b>기말: </b>HTML 통합, 게시글 데이터 객체 형태 관리 및 게시글
+                  렌더링
+                </p>
               </div>
             </div>
 
@@ -206,5 +218,18 @@
     <footer class="footer">
       <p>© 2026 Kim Min Jae. All rights reserved.</p>
     </footer>
+
+    <button
+      id="theme-toggle"
+      class="theme-toggle-btn"
+      aria-label="다크 모드 전환"
+    >
+      🌙
+    </button>
+    <button id="scroll-to-top" class="scroll-btn" aria-label="맨 위로 이동">
+      ↑
+    </button>
+
+    <script src="script.js"></script>
   </body>
 </html>
