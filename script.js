@@ -1,9 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
-  // 📢 0. 상단 전광판 문구 무한 순환 기능 (새로 추가됨)
+  // 📢 0. 상단 전광판 문구 무한 순환 기능
   // ==========================================
   const tickerText = document.getElementById('ticker-text')
-  const messages = ['> 이병천 교수님 팬입니다', '> 웹프로그래밍 너무 재밌어요!']
+  const messages = [
+    '> ❤️이병천 교수님 팬입니다❤️',
+    '> 웹프로그래밍 너무 재밌어요!',
+    '> 앞으로도 잘 부탁드리겠습니다!!',
+  ]
   let messageIndex = 0
 
   // 3초마다 문구를 순환시키는 함수
@@ -85,4 +89,29 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   })
+})
+
+// ==========================================
+//  4. 이스터 에그 (로고 클릭 시 콘솔 및 알림)
+// ==========================================
+const logo = document.querySelector('.logo')
+let clickCount = 0
+
+// 이병천 교수님 이스터에그 꼭 확인해주십쇼..!
+console.log(
+  "%c💻 Kim MinJae's Security Portfolio",
+  'color: #00ffcc; background: #001122; font-size: 16px; padding: 5px 10px; border-radius: 5px;',
+)
+console.log(
+  '웹 프로그래밍과 웹 해킹을 사랑하는 정보보호학전공 학생입니다. 로고를 5번 클릭해보세요!',
+)
+
+logo.addEventListener('click', () => {
+  clickCount++
+  if (clickCount === 5) {
+    alert(
+      '❤️이병천 교수님❤️ 안녕하십니까! 웹 프로그래밍(HTML/CSS/JS) 열심히 공부하고 있는 김민재입니다!! 수업 정말 잘 듣고 있고 앞으로도 잘 부탁드리겠습니다!!',
+    )
+    clickCount = 0
+  }
 })
